@@ -130,12 +130,13 @@ h6 {
 .header__left {
   display: inline-block;
   float: left;
-  width: 30%;
+  width: 10%;
 }
 .header__right {
   display: inline-block;
   float: left;
-  width: 70%;
+  width: 90%;
+  text-align:right;
 }
 
 .header__logo {
