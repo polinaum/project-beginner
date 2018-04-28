@@ -116,6 +116,7 @@ h6 {
 }
 
 .hero__container {
+  height: 100%;
 }
 
 .header {
@@ -126,10 +127,15 @@ h6 {
   padding-top: 10px;
 }
 
-.header__left, .header__right {
+.header__left {
   display: inline-block;
   float: left;
-  width: 50%;
+  width: 30%;
+}
+.header__right {
+  display: inline-block;
+  float: left;
+  width: 70%;
 }
 
 .header__logo {
@@ -176,8 +182,9 @@ display: none;
 
 .header__btn {
   display: inline-block;
-  position: absolute;
+  position: relative;
   padding-top:20px;
+  vertical-align: middle;
   
 }
 
@@ -195,8 +202,10 @@ display: none;
 
 .hero__content {
   width: 100%;
-  /* position: relative; */
-  vertical-align: middle;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  padding-bottom: 20%;
   /* display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
@@ -231,4 +240,17 @@ display: none;
   font-size: 65px;
   text-align: left;
   line-height: 0.95;
+}
+
+.arrow  {
+  width: 950px;
+  bottom: 40px;
+  position: absolute;
+  text-align: center;
+}
+
+.arrow__link {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
