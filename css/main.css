@@ -142,22 +142,14 @@ h6 {
   text-align:right;
 }
 
-.header__logo {
-  /* margin-right: auto; */
-}
-
 
 .menu {
-  display: inline-block;
   position: relative;
   vertical-align: middle;
   padding-top:20px;
   
 }
 
-.menu__list {
-  /* margin-right: auto; */
-}
 
 .menu__item {
   display: inline-block;
@@ -286,14 +278,11 @@ display: none;
   position: relative;
 }
 
-.about__block {
-  
-}
+
 .about__list {
     /* padding-left: 0; */
-    vertical-align: top;
     display: block;
-    /* align-content: top; */
+    align-content: top;
 }
 
 .about__item {
@@ -335,4 +324,20 @@ display: none;
     color: #6b6a6a;
     font-weight: 300;
     line-height: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reviwes__list {
+  height: 100%;
+}
+
+.reviews__item {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 50%;
+  border: solid black 1px;
 }
