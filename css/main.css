@@ -50,6 +50,10 @@ ul {
   padding: 0;
 }
 
+p {
+  margin: 0; 
+  }
+
 h1,
 h2,
 h3,
@@ -94,18 +98,11 @@ h6 {
   height: 100%;
   min-height: 650px;
 }
-.container {
-  width: 940px;
-  margin: 0 auto;
-  /* display: block; */
-  
-}
+
 
 .section {
   height: 100%;
-  background-color: #ffff;
 }
-
 
 .hero {
   background-image: url('../img/bckgr.png');
@@ -113,6 +110,12 @@ h6 {
   background-position: 50%;
   background-size: cover;
   position: relative;
+  /* display:none; */
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
 }
 
 .hero__container {
@@ -190,7 +193,7 @@ display: none;
 }
 
 .order-link {
-  min-width: rem(98px);
+  /* min-width: rem(98px); */
   /* position: rem(10px) rem *(17px); */
   border-radius: 5px;
   background-color: #e45028;
@@ -202,7 +205,6 @@ display: none;
 }
 
 .hero__content {
-  width: 100%;
   top: 50%;
   transform: translateY(-50%);
   position: relative;
@@ -214,10 +216,6 @@ display: none;
   padding-bottom: 15%; */
 }
 
-/* .hero__img, .hero__descr {
-  flex-basis: 50%;
-  display: flex;
-} */
 
 .hero__img, .hero__descr {
   width: 50%;
@@ -225,15 +223,23 @@ display: none;
   float:left;
 } 
 
+/* .hero__img, .hero__descr {
+  flex-basis: 50%;
+  display: flex;
+} */
+
 .hero__descr {
   padding: 15% 0;
   text-align: left;
 }
 
-.hero__title {
+.section__title {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
-  color: #f9b43b;
   font-size: 72px;
+}
+
+.section__title--hero {
+  color: #f9b43b;
 }
 
 .hero__descr-text {
@@ -254,4 +260,79 @@ display: none;
   display: inline-block;
   margin: 0 auto;
   text-align: center;
+}
+
+.about {
+  background-image: url('../img/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.about__container {
+  position: relative;
+  top: 47%;
+  transform: translateY(-50%);
+}
+
+.section__title--about {
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.about__content {
+  position: relative;
+}
+
+.about__block {
+  
+}
+.about__list {
+    /* padding-left: 0; */
+    vertical-align: top;
+    display: block;
+    /* align-content: top; */
+}
+
+.about__item {
+    width: 31%;
+    float: left;
+    color: #2f3234;
+    text-align: center;
+    margin: 0 10px;
+}
+
+
+.about__icon {
+   margin: 0 auto;
+    height: 100px;
+    margin-bottom: 32px;
+}
+
+.meat {
+    background: url('../icons/meat.svg') center no-repeat;
+}
+
+.hand {
+    background:  url('../icons/hand.svg') center no-repeat;
+}
+
+.natural {
+  background: url('../icons/natural.svg') center no-repeat;
+}
+
+
+.about__item-title {
+  font-family: "Lifehack", Arial, Helvetica, sans-serif ;
+    font-size: 24.12px;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.about__text {
+    color: #6b6a6a;
+    font-weight: 300;
+    line-height: 24px;
 }
