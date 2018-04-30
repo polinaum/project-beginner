@@ -440,21 +440,26 @@ display: none;
 
 .nav__item  {
   position: relative;
+  width: 18px;
+  height: 18px;
+  margin-bottom: 6px;
+}
+
+.nav__link  {
+  position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   border-color: #fff;
   background-color: #fff;
-  vertical-align: middle;
-  margin-bottom: 15px;
+  top: 6px;
+  left: 6px;
 }
 
 
 .nav__item--active::before {
   content: '';
   position: absolute;
-  top: -6px;
-  left: -6px;
   width: 18px;
   height: 18px;
   border: 2px solid #fff;
@@ -464,8 +469,6 @@ display: none;
 .nav__item:hover::before {
   content: '';
   position: absolute;
-  top: -6px;
-  left: -6px;
   width: 18px;
   height: 18px;
   border: 2px solid #fff;
