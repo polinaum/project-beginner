@@ -131,12 +131,12 @@ h6 {
 }
 
 .header__left {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   width: 10%;
 }
 .header__right {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   width: 90%;
   text-align:right;
@@ -147,7 +147,7 @@ h6 {
   position: relative;
   vertical-align: middle;
   padding-top:20px;
-  
+  display: inline-block;
 }
 
 
@@ -174,6 +174,10 @@ h6 {
 
 .menu__item:last-child:after {
 display: none;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
 }
 
 .header__btn {
