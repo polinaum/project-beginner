@@ -1,0 +1,97 @@
+
+@mixin circle ($width) {
+  width: $width;
+  height: $width;
+  border: 1px solid #fff;
+  background-color: #fff;
+  -webkit-border-radius: $width/2;
+   -moz-border-radius: $width/2;
+   -o-border-radius: $width/2;
+   -ms-border-radius: $width/2;
+   border-radius: $width/2;
+  }
+
+$orange: #f9b43b;
+$title-font: "Gagalin", Arial, Helvetica, sans-serif;
+$lifehack-font: "Lifehack", Arial, Helvetica, sans-serif ;
+
+
+.about {
+  background-image: url('../../img/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+
+  &__container {
+    position: relative;
+    top: 47%;
+    transform: translateY(-50%);
+  }
+
+  &__content {
+    position: relative;
+  }
+}
+
+
+
+.section__title--about {
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+
+
+
+.about__list {
+    display: block;
+    align-content: top;
+    margin-left: 10px;
+    
+}
+
+.about__item {
+    width: 31%;
+    float: left;
+    color: #2f3234;
+    text-align: center;
+
+    &:not(:last-child) {
+    margin-right: 31px;
+  }
+}
+
+
+.about__icon {
+   margin: 0 auto;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+.meat {
+    background: url('../../icons/meat.svg') center no-repeat;
+}
+
+.hand {
+    background:  url('../../icons/hand.svg') center no-repeat;
+}
+
+.natural {
+  background: url('../../icons/natural.svg') center no-repeat;
+}
+
+
+.about__item-title {
+  font-family: $lifehack-font;
+    font-size: 24.12px;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+.about__text {
+    color: #6b6a6a;
+    font-weight: 300;
+    line-height: 24px;
+}

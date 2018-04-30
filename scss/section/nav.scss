@@ -1,0 +1,46 @@
+@mixin circle ($width) {
+  width: $width;
+  height: $width;
+  border: 1px solid #fff;
+  background-color: #fff;
+  -webkit-border-radius: $width/2;
+   -moz-border-radius: $width/2;
+   -o-border-radius: $width/2;
+   -ms-border-radius: $width/2;
+   border-radius: $width/2;
+  }
+
+$orange: #f9b43b;
+$title-font: "Gagalin", Arial, Helvetica, sans-serif;
+$lifehack-font: "Lifehack", Arial, Helvetica, sans-serif ;
+
+
+
+.nav {
+  position:fixed;
+  top: 90px;
+  right: 38px;
+}
+
+.nav__item  {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 5px;
+
+  &:hover::before, &--active::before {
+    content: '';
+    position: absolute;
+    @include circle(16px);
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.nav__link  {
+  position: absolute;
+  @include circle(6px);
+  top: 5px;
+  left: 5px;
+}
