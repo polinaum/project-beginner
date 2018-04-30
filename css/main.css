@@ -334,10 +334,11 @@ display: none;
   display: none;
 }
 
+
+
 .reviews__list {
   height: 100%;
-  width: 100%;
-  min-width: 1100px;
+  min-width: 940px;
 }
 
 .reviews__item {
@@ -356,30 +357,30 @@ display: none;
  
 }
 .reviews__item:nth-child(2) {
-  background-image: url('/img/av-02.jpg');
+  background-image: url('/img/av-2.jpg');
  
 }
 .reviews__item:nth-child(3) {
-  background-image: url('/img/av-03.jpg');
+  background-image: url('/img/av-3.jpg');
 }
 .reviews__item:nth-child(4) {
-  background-image: url('/img/av-04.jpg');
+  background-image: url('/img/av-4.jpg');
  
 }
 .reviews__item:nth-child(5) {
-  background-image: url('/img/av-05.jpg');
+  background-image: url('/img/av-5.jpg');
  
 }
 .reviews__item:nth-child(6) {
-  background-image: url('/img/av-06.jpg');
+  background-image: url('/img/av-6.jpg');
  
 }
 .reviews__item:nth-child(7) {
-  background-image: url('/img/av-07.jpg');
+  background-image: url('/img/av-7.jpg');
  
 }
 .reviews__item:nth-child(8) {
-  background-image: url('/img/av-08.jpg');
+  background-image: url('/img/av-8.jpg');
  
 }
 
