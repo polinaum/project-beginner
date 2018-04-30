@@ -131,7 +131,6 @@ h6 {
 }
 
 .header__left {
-  /* margin: 3px 0 0 4px; */
   float: left;
   width: 10%;
 }
@@ -282,14 +281,13 @@ display: none;
 
 .about__container {
   position: relative;
-  /* top: 47%;
-  transform: translateY(-50%); */
+  top: 47%;
+  transform: translateY(-50%);
 }
 
 .section__title--about {
   color: #2f3234;
   text-align: center;
-  padding-top: 12%;
   margin-bottom: 18px;
 }
 
@@ -299,7 +297,6 @@ display: none;
 
 
 .about__list {
-    /* padding-left: 0; */
     display: block;
     align-content: top;
     margin-left: 10px;
@@ -409,7 +406,7 @@ display: none;
   height: 100%;
   position: absolute;
   opacity: 1;
-  padding: 40px 22px 0;
+  padding: 44px 22px 0;
   opacity:0;
   background-color: rgb(0, 0, 0, 0.6);
   /* overflow: hidden; */
@@ -423,7 +420,7 @@ display: none;
 
 .reviews__title {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 19px;
 }
 
 .reviews__text {
