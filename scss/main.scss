@@ -1,15 +1,16 @@
 //layout
-@import url("./layout/base.scss");
-@import url("./layout/adjustments.scss");
-@import url("./layout/fonts.scss");
+@import "./layout/normalize.css";
+@import "./layout/base.scss";
+@import "./layout/adjustments.scss";
+@import "./layout/fonts.scss";
 //config
-@import url("./config/mixins.scss");
-@import url("./config/variables.scss");
+@import "./config/mixins.scss";
+@import "./config/variables.scss";
 //section
-@import url("./section/hero.scss");
-@import url("./section/about.scss");
-@import url("./section/reviews.scss");
-@import url("./section/nav.scss");
+@import "./section/hero.scss";
+@import "./section/about.scss";
+@import "./section/reviews.scss";
+@import "./section/nav.scss";
 
 
 
