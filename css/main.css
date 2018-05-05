@@ -90,7 +90,7 @@ h6 {
   font-display: fallback; }
 
 .hero {
-  background-image: url("../../img/bckgr.png");
+  background-image: url("../img/bckgr.png");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -219,7 +219,7 @@ h6 {
     text-align: center; }
 
 .about {
-  background-image: url("../../img/bg-about.jpg");
+  background-image: url("../img/bg-about.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -258,13 +258,13 @@ h6 {
   margin-bottom: 25px; }
 
 .meat {
-  background: url("../../icons/meat.svg") center no-repeat; }
+  background: url("../icons/meat.svg") center no-repeat; }
 
 .hand {
-  background: url("../../icons/hand.svg") center no-repeat; }
+  background: url("../icons/hand.svg") center no-repeat; }
 
 .natural {
-  background: url("../../icons/natural.svg") center no-repeat; }
+  background: url("../icons/natural.svg") center no-repeat; }
 
 .about__descr h3 {
   font-family: "Lifehack", Arial, Helvetica, sans-serif;
@@ -286,7 +286,6 @@ h6 {
   float: left;
   width: 25%;
   height: 50%;
-  background: url("../../img/av-2.jpg") 50% no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(1);
   filter: grayscale(1); }
@@ -383,5 +382,10 @@ h6 {
   border-radius: 3px;
   top: 5px;
   left: 5px; }
+
+.team {
+  background: url("../img/team.jpg") center center/cover no-repeat; }
+  .team__container {
+    height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */

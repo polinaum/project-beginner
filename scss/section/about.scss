@@ -1,5 +1,5 @@
 .about {
-  background-image: url('../../img/bg-about.jpg');
+  background-image: url('../img/bg-about.jpg');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -51,15 +51,15 @@
 }
 
 .meat {
-    background: url('../../icons/meat.svg') center no-repeat;
+    background: url('../icons/meat.svg') center no-repeat;
 }
 
 .hand {
-    background:  url('../../icons/hand.svg') center no-repeat;
+    background:  url('../icons/hand.svg') center no-repeat;
 }
 
 .natural {
-  background: url('../../icons/natural.svg') center no-repeat;
+  background: url('../icons/natural.svg') center no-repeat;
 }
 
 .about__descr {
