@@ -1,7 +1,129 @@
 .team {
-    background: url('../img/team.jpg') center center/cover no-repeat;
+    background: url('../img/team.jpg') 50% / cover no-repeat;
+    position: relative;
 
-    &__container {
-        height: 100vh;
+    .section__title {
+        color: $orange;
     }
+
 }
+
+.team__container {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(#2f3234, .93);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__content  {
+    padding: 0 17%;
+}
+
+//accordeon
+
+ .team__acc {
+    margin-left: 10px;
+ } 
+
+ .team-acc__item {
+     margin-bottom: 40px;
+     
+     &:last-child {
+         margin-bottom: 0;
+     }
+
+     &--active {
+        .team-acc__trigger {
+            color: $orange;
+
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+
+        .team-acc__content {
+            display: flex;
+        }
+    }
+ }
+
+ .team-acc__trigger {
+     color: #fff;
+     font-size: 14px;
+     font-family: $title-font;
+     position: relative;
+     display: flex;
+     align-items: center;
+     margin-bottom: 10px;
+
+     &:before, &:after {
+         content: "";
+         display: block;
+         position: absolute;
+         left: -18px;
+         top: 8px;
+         width: 7px;
+         height: 7px;
+     }
+
+     &:before {
+        border-top: 7px solid $orange;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 0px solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+     }
+
+    //  &:after {
+	// 	display: none;
+	// 	border-bottom: 7px solid $orange;
+	// 	border-left: 5px solid transparent;
+	// 	border-right: 5px solid transparent;
+	// 	border-top: 0px solid transparent;
+	// }
+ }
+
+ .team-acc__content {
+     display: none;
+     overflow: hidden;
+ }
+
+ .team-acc__pic {
+     flex-basis: 100%;
+     max-width: 100px;
+     overflow: hidden;
+     flex: 1;
+ }
+
+ .team-acc__img {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background: center / cover no-repeat;
+ }
+
+ .team-acc__text {
+     margin-left: 20px;
+     flex: 1;
+
+
+ }
+
+ .team-acc__title {
+	font-weight: bold;
+	font-size:14px;
+	margin-bottom:14px;
+}
+
+.team-acc__descr {
+	font-weight: light;
+	font-size:14px;
+}
+  

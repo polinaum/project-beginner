@@ -8,7 +8,7 @@
   float: left;
   width: 25%;
   height: 50%;
-  background-size: cover;
+  background: center center / cover no-repeat;
   filter: grayscale(1);
 
   &:hover .reviews__transparency {
