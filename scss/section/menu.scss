@@ -1,0 +1,83 @@
+.menu {
+    background: url('../img/menu-bg.jpg') 50% / cover no-repeat;
+    position: relative;
+
+   .section__title {
+    position: absolute;
+    padding: 100px 80px;
+    }
+
+}
+
+.menu-acc {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.menu-acc__item {
+    height: 100%;
+    display: flex;
+
+    &--active {
+
+        .menu-acc__trigger-name {
+            color: $orange;
+        }
+        .menu-acc__content {
+            width: 550px;
+        }
+        .menu-acc__text {
+            display: inline-block;
+        }
+    }
+}
+
+.menu-acc__trigger {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 80px;
+    position: relative;
+    background: center right / cover no-repeat;
+    
+    &:before {
+        content: "";
+        background-color: rgba(#2f3234, .70);
+        position: absolute;
+        width: 80px;
+        height: 100%;
+    }
+}
+.menu-acc__trigger-name {
+    color: #fff;
+    font-size: 48px;
+    font-family: $title-font;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    white-space: nowrap;
+    margin-top: -50px;
+}
+
+
+.menu-acc__content {
+    height: 100%;
+    float: left;
+    background: rgba(#2f3234, .93);
+    width: 0;
+    overflow: hidden;
+}
+
+.menu-acc__text {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 10% 7%;
+    width: 100%;
+    display: none;
+}

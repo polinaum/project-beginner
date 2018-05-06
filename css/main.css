@@ -120,17 +120,17 @@ h6 {
     padding-top: 23px;
     vertical-align: middle; }
 
-.menu {
+.top-menu {
   position: relative;
   vertical-align: middle;
   padding-top: 20px;
   display: inline-block;
   margin-right: 13px; }
-  .menu__item {
+  .top-menu__item {
     display: inline-block;
     position: relative;
     margin-left: 16px; }
-    .menu__item::before {
+    .top-menu__item::before {
       content: "";
       width: 5px;
       height: 5px;
@@ -146,14 +146,14 @@ h6 {
       vertical-align: middle;
       margin-right: 10px;
       margin-top: -2px; }
-    .menu__item:first-child::before {
+    .top-menu__item:first-child::before {
       display: none; }
-    .menu__item:hover {
+    .top-menu__item:hover {
       text-decoration: underline;
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s; }
-  .menu__link {
+  .top-menu__link {
     color: #fff;
     text-transform: uppercase;
     font-size: 13px; }
@@ -499,5 +499,78 @@ h6 {
 .team-acc__descr {
   font-weight: light;
   font-size: 14px; }
+
+.menu {
+  background: url("../img/menu-bg.jpg") 50%/cover no-repeat;
+  position: relative; }
+  .menu .section__title {
+    position: absolute;
+    padding: 100px 80px; }
+
+.menu-acc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu-acc__item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .menu-acc__item--active .menu-acc__trigger-name {
+    color: #f9b43b; }
+  .menu-acc__item--active .menu-acc__content {
+    width: 550px; }
+  .menu-acc__item--active .menu-acc__text {
+    display: inline-block; }
+
+.menu-acc__trigger {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 80px;
+  position: relative;
+  background: center right / cover no-repeat; }
+  .menu-acc__trigger:before {
+    content: "";
+    background-color: rgba(47, 50, 52, 0.7);
+    position: absolute;
+    width: 80px;
+    height: 100%; }
+
+.menu-acc__trigger-name {
+  color: #fff;
+  font-size: 48px;
+  font-family: "Gagalin", Arial, Helvetica, sans-serif;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+  -ms-transform: rotate(-90deg) translateY(-50%);
+  transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  white-space: nowrap;
+  margin-top: -50px; }
+
+.menu-acc__content {
+  height: 100%;
+  float: left;
+  background: rgba(47, 50, 52, 0.93);
+  width: 0;
+  overflow: hidden; }
+
+.menu-acc__text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 10% 7%;
+  width: 100%;
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
