@@ -4,38 +4,43 @@
     display: flex;
     align-items: center;
 
+    &__container {
+    width: 963px;
+    }   
+
     .section__title    {
     color: $orange;
     text-align: center;
+    // margin-top: -7%;
     }
 }
 
-
-
 .order__form {
-    width: 100%;
+    // width: 100%;
     display: flex;
+    // margin-left: -5%;
     
 }
 
 .order__form-col {
-    width: 50%;
+    width: 49%;
+    margin-left: 0.6%;
     
 }
 
 .order__form-row {
     display: flex;
-    margin-bottom: 10px;
-    margin-left: -10px;
-    
+    margin-left: -4px;
+    margin-bottom: 18px;
+    margin-right: 6px;
 }
 
 .order__form-block {
     width: 100%;
     display: block;
     flex: 1;
-    margin-left: 13px;
-    padding: 10px;
+    margin-left: 10px;
+    // padding: 10px;
 }
 
 .order__form-label {
@@ -45,10 +50,10 @@
 .order__form-input {
    width: 100%;
    border-radius: 5px;
-   height: 32px;
+   height: 35px;
    border: 1px solid rgb(209, 207, 203);
    outline: none;
-   padding: 0 10px;
+   padding: 0 18px;
 
    &:focus {
     border: 2px solid rgb(249, 180, 59);
@@ -58,11 +63,12 @@
 .order__form-input--textarea {
     height: 110px;
     resize: none;
-    padding: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .order__form-buttons {
-      margin-left: 23px;
+      margin-left: 10px;
   }
 
   .order__radio {
