@@ -6,12 +6,21 @@
 
     &__container {
     width: rem(963px);
+
+    @include tablet {
+      padding-bottom: 16%;
+    }
+    
     }   
 
     .section__title    {
     color: $orange;
     text-align: center;
     // margin-top: -7%;
+
+    @include tablet {
+      padding-bottom: 2rem;
+    }
     }
 }
 
@@ -19,12 +28,23 @@
     // width: 100%;
     display: flex;
     // margin-left: -5%;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 0 20%;
+      margin-left: -5%;
+      font-size: 14px;
+    }
     
 }
 
 .order__form-col {
     width: 49%;
     margin-left: 0.6%;
+
+    @include tablet { 
+      width: 100%;
+    }
     
 }
 
@@ -33,6 +53,11 @@
     margin-left: rem(-4px);
     margin-bottom: rem(18px);
     margin-right: rem(6px);
+
+    @include tablet {
+      margin-bottom: 1.6rem;
+    }
+
 }
 
 .order__form-block {
@@ -41,6 +66,10 @@
     flex: 1;
     margin-left: rem(10px);
     // padding: rem(10px);
+
+    @include tablet {
+      margin-left: 5%;
+    }
 }
 
 .order__form-label {
@@ -50,10 +79,12 @@
 .order__form-input {
    width: 100%;
    border-radius: 5px;
-   height: rem(35px);
+   height: 35px;
    border: 1px solid rgb(209, 207, 203);
    outline: none;
    padding: 0 rem(18px);
+
+  
 
    &:focus {
     border: 2px solid rgb(249, 180, 59);
@@ -61,7 +92,7 @@
 }
 
 .order__form-input--textarea {
-    height: rem(110px);
+    height: 110px;
     resize: none;
     padding-top: rem(10px);
     padding-bottom: rem(10px);
@@ -69,6 +100,10 @@
 
   .order__form-buttons {
       margin-left: rem(10px);
+
+      @include tablet {
+        margin-left: 5%;
+      }
   }
 
   .order__radio {
@@ -147,12 +182,12 @@
     margin-right: rem(20px);
     border: 0;
     background: $red;
-    font-size: rem(13px);
+    font-size: 13px;
     text-transform: uppercase;
     border-radius: 5px;
     color: #ffffff;
     
-    padding: rem(10px) rem(15px);
+    padding: 10px 15px;
     cursor: pointer;
   }
   

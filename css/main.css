@@ -379,8 +379,7 @@ h6 {
   line-height: 1.5rem; }
 
 .reviews__list {
-  height: 100%;
-  min-width: 58.75rem; }
+  height: 100%; }
 
 .reviews__item {
   position: relative;
@@ -390,6 +389,11 @@ h6 {
   background: center center / cover no-repeat;
   -webkit-filter: grayscale(1);
   filter: grayscale(1); }
+  @media screen and (max-width: 768px) {
+    .reviews__item {
+      width: 50%;
+      height: 25%;
+      text-align: center; } }
   .reviews__item:hover .reviews__transparency {
     opacity: 0.6;
     filter: alpha(opacity=60);
@@ -682,18 +686,36 @@ h6 {
   align-items: center; }
   .order__container {
     width: 60.1875rem; }
+    @media screen and (max-width: 768px) {
+      .order__container {
+        padding-bottom: 16%; } }
   .order .section__title {
     color: #f9b43b;
     text-align: center; }
+    @media screen and (max-width: 768px) {
+      .order .section__title {
+        padding-bottom: 2rem; } }
 
 .order__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .order__form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0 20%;
+      margin-left: -5%;
+      font-size: 14px; } }
 
 .order__form-col {
   width: 49%;
   margin-left: 0.6%; }
+  @media screen and (max-width: 768px) {
+    .order__form-col {
+      width: 100%; } }
 
 .order__form-row {
   display: -webkit-box;
@@ -702,6 +724,9 @@ h6 {
   margin-left: -0.25rem;
   margin-bottom: 1.125rem;
   margin-right: 0.375rem; }
+  @media screen and (max-width: 768px) {
+    .order__form-row {
+      margin-bottom: 1.6rem; } }
 
 .order__form-block {
   width: 100%;
@@ -710,6 +735,9 @@ h6 {
   -ms-flex: 1;
   flex: 1;
   margin-left: 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .order__form-block {
+      margin-left: 5%; } }
 
 .order__form-label {
   margin-bottom: 0.3125rem; }
@@ -717,7 +745,7 @@ h6 {
 .order__form-input {
   width: 100%;
   border-radius: 5px;
-  height: 2.1875rem;
+  height: 35px;
   border: 1px solid #d1cfcb;
   outline: none;
   padding: 0 1.125rem; }
@@ -725,13 +753,16 @@ h6 {
     border: 2px solid #f9b43b; }
 
 .order__form-input--textarea {
-  height: 6.875rem;
+  height: 110px;
   resize: none;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem; }
 
 .order__form-buttons {
   margin-left: 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .order__form-buttons {
+      margin-left: 5%; } }
 
 .order__radio {
   position: relative;
@@ -796,11 +827,11 @@ h6 {
   margin-right: 1.25rem;
   border: 0;
   background: #e45028;
-  font-size: 0.8125rem;
+  font-size: 13px;
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff;
-  padding: 0.625rem 0.9375rem;
+  padding: 10px 15px;
   cursor: pointer; }
 
 .order__form-button_reset {
