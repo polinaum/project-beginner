@@ -4,7 +4,7 @@
 
    .section__title {
     position: absolute;
-    padding: 89px 95px;
+    padding: rem(89px) rem(95px);
     }
 
 }
@@ -27,7 +27,7 @@
             color: $orange;
         }
         .menu-acc__content {
-            width: 550px;
+            width: rem(550px);
         }
         .menu-acc__text {
             display: inline-block;
@@ -39,7 +39,7 @@
     display: block;
     float: left;
     height: 100%;
-    width: 80px;
+    width: rem(80px);
     position: relative;
     background: center right / cover no-repeat;
     
@@ -47,13 +47,13 @@
         content: "";
         background-color: rgba(#2f3234, .70);
         position: absolute;
-        width: 80px;
+        width: rem(80px);
         height: 100%;
     }
 }
 .menu-acc__trigger-name {
     color: #fff;
-    font-size: 40px;
+    font-size: rem(40px);
     font-family: $title-font;
     transform: rotate(-90deg) translateY(-50%);
     transform-origin: 0 0;
@@ -61,7 +61,7 @@
     top: 100%;
     left: 50%;
     white-space: nowrap;
-    margin-top: -38px;
+    margin-top: rem(-38px);
 }
 
 
@@ -75,7 +75,7 @@
 
 .menu-acc__text {
     color: #fff;
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 1.8;
     padding: 10% 7%;
     width: 100%;

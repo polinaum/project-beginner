@@ -21,14 +21,13 @@
 .section__title--about {
   color: #2f3234;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
 }
 
 
 .about__list {
-    display: block;
-    align-content: top;
-    margin-left: 10px;
+    display: flex;
+    margin-left: rem(10px);
     
 }
 
@@ -39,15 +38,15 @@
     text-align: center;
 
     &:not(:last-child) {
-    margin-right: 31px;
+    margin-right: rem(31px);
   }
 }
 
 
 .about__icon {
    margin: 0 auto;
-    height: 100px;
-    margin-bottom: 25px;
+    height: rem(100px);
+    margin-bottom: rem(25px);
 }
 
 .meat {
@@ -65,7 +64,7 @@
 .about__descr {
   h3 {
     font-family: $lifehack-font;
-      font-size: 24.12px;
+      font-size: rem(24px);
       margin-bottom: 0.5em;
       line-height: 1.2;
   }
@@ -73,6 +72,6 @@
   p {
       color: #6b6a6a;
       font-weight: 300;
-      line-height: 24px;
+      line-height: rem(24px);
   }
 }

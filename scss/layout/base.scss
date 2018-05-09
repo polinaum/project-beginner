@@ -1,3 +1,21 @@
+html {
+  @include desktop {
+    font-size: 16px;
+  }
+
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include phone {
+    font-size: 13px;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   }
@@ -11,7 +29,7 @@
     padding: 0;
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.42;
     color: #fff;
     -webkit-font-smoothing: antialiased;
@@ -46,8 +64,8 @@
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
-    height: 1px; width: 1px;
-    margin: -1px;
+    height: rem(1px); width: rem(1px);
+    margin: rem(-1px);
     padding: 0;
     border: 0;
     }

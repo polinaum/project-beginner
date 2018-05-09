@@ -1,22 +1,28 @@
-//layout
+//normalize
 @import "./layout/normalize.css";
-@import "./layout/base.scss";
-@import "./layout/adjustments.scss";
-@import "./layout/fonts.scss";
+//media
+@import "./config/media.scss";
 //config
 @import "./config/mixins.scss";
 @import "./config/variables.scss";
+//layout
+@import "./layout/fonts.scss";
+@import "./layout/base.scss";
+@import "./layout/adjustments.scss";
 //section
 @import "./section/hero.scss";
+@import "./section/button.scss";
+@import "./section/hamburger-menu.scss";
 @import "./section/about.scss";
 @import "./section/reviews.scss";
-@import "./section/nav.scss";
 @import "./section/team.scss";
 @import "./section/menu.scss";
+@import "./section/order.scss";
 @import "./section/map.scss";
 @import "./section/footer.scss";
 @import "./section/social.scss";
-@import "./section/order.scss";
+@import "./section/nav.scss";
+
 
 
 

@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 7px 83px;    
+    padding: rem(7px) rem(83px);    
 }
 
 
@@ -21,14 +21,14 @@
   }
   
   .footer__address {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
   
   .footer__phone {
     color: $red;
     font-weight: bold;
     text-decoration: none;
-    font-size: 14px;
+    font-size: rem(14px);
   }
   
   .footer__col--right {
@@ -40,6 +40,6 @@
 
   #phone {
       fill: $red;
-      margin-right: 5px;
+      margin-right: rem(5px);
       vertical-align: middle;
   }
