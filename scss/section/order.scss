@@ -19,10 +19,20 @@
     // margin-top: -7%;
 
     @include tablet {
-      padding-bottom: 2rem;
+      padding-bottom: 0;
+
+    }
+    @include phone {
+      font-size: 4rem;
+      white-space: normal;
+      text-align: center;
+      padding-top: 12%;
+      padding-bottom: 0;
     }
     }
 }
+
+
 
 .order__form {
     // width: 100%;
@@ -35,6 +45,12 @@
       margin-left: -5%;
       font-size: 14px;
     }
+
+    @include phone {
+      padding: 0 2%;
+      margin-left: 0;
+      
+    }
     
 }
 
@@ -44,6 +60,9 @@
 
     @include tablet { 
       width: 100%;
+    }
+    @include phone { 
+      margin-left: 0;
     }
     
 }
@@ -56,6 +75,9 @@
 
     @include tablet {
       margin-bottom: 1.6rem;
+    }
+    @include phone {
+      margin-bottom: 1rem;
     }
 
 }
@@ -70,6 +92,15 @@
     @include tablet {
       margin-left: 5%;
     }
+    @include phone {
+      margin-left: 2%;
+    }
+
+    &.floor {
+   @include phone {
+    display: none;
+   }
+  }
 }
 
 .order__form-label {
@@ -79,7 +110,7 @@
 .order__form-input {
    width: 100%;
    border-radius: 5px;
-   height: 35px;
+   height: rem(35px);
    border: 1px solid rgb(209, 207, 203);
    outline: none;
    padding: 0 rem(18px);
@@ -89,10 +120,12 @@
    &:focus {
     border: 2px solid rgb(249, 180, 59);
    }
+
+   
 }
 
 .order__form-input--textarea {
-    height: 110px;
+    height: rem(110px);
     resize: none;
     padding-top: rem(10px);
     padding-bottom: rem(10px);
@@ -104,6 +137,14 @@
       @include tablet {
         margin-left: 5%;
       }
+      @include phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+
   }
 
   .order__radio {

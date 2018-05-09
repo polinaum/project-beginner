@@ -234,6 +234,9 @@ h6 {
       padding: 0 0;
       text-align: center;
       width: 70%; } }
+  @media screen and (max-width: 480px) {
+    .hero__descr {
+      width: 100%; } }
 
 .section__title {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
@@ -243,6 +246,9 @@ h6 {
     .section__title {
       font-size: 5rem;
       margin: 1rem; } }
+  @media screen and (max-width: 480px) {
+    .section__title {
+      font-size: 4.5rem; } }
   .section__title--hero {
     color: #f9b43b; }
 
@@ -344,6 +350,15 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   margin-left: 0.625rem; }
+  @media screen and (max-width: 480px) {
+    .about__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .about__item {
   width: 31%;
@@ -352,11 +367,30 @@ h6 {
   text-align: center; }
   .about__item:not(:last-child) {
     margin-right: 1.9375rem; }
+  @media screen and (max-width: 480px) {
+    .about__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: 100%;
+      text-align: left;
+      margin-right: 1.9375rem; } }
 
 .about__icon {
   margin: 0 auto;
   height: 6.25rem;
   margin-bottom: 1.5625rem; }
+  @media screen and (max-width: 480px) {
+    .about__icon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 40%;
+      height: 7rem; } }
 
 .meat {
   background: url("../icons/meat.svg") center no-repeat; }
@@ -372,6 +406,10 @@ h6 {
   font-size: 1.5rem;
   margin-bottom: 0.5em;
   line-height: 1.2; }
+  @media screen and (max-width: 480px) {
+    .about__descr h3 {
+      text-align: left;
+      padding-left: 1.5rem; } }
 
 .about__descr p {
   color: #6b6a6a;
@@ -424,6 +462,9 @@ h6 {
 .reviews__title {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
   margin-bottom: 1.1875rem; }
+  @media screen and (max-width: 480px) {
+    .reviews__title {
+      font-size: 20px; } }
 
 .reviews__text {
   font-weight: 300;
@@ -433,6 +474,9 @@ h6 {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
+  @media screen and (max-width: 480px) {
+    .reviews__text {
+      display: none; } }
 
 .more-link {
   text-transform: uppercase;
@@ -694,7 +738,14 @@ h6 {
     text-align: center; }
     @media screen and (max-width: 768px) {
       .order .section__title {
-        padding-bottom: 2rem; } }
+        padding-bottom: 0; } }
+    @media screen and (max-width: 480px) {
+      .order .section__title {
+        font-size: 4rem;
+        white-space: normal;
+        text-align: center;
+        padding-top: 12%;
+        padding-bottom: 0; } }
 
 .order__form {
   display: -webkit-box;
@@ -709,6 +760,10 @@ h6 {
       padding: 0 20%;
       margin-left: -5%;
       font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    .order__form {
+      padding: 0 2%;
+      margin-left: 0; } }
 
 .order__form-col {
   width: 49%;
@@ -716,6 +771,9 @@ h6 {
   @media screen and (max-width: 768px) {
     .order__form-col {
       width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .order__form-col {
+      margin-left: 0; } }
 
 .order__form-row {
   display: -webkit-box;
@@ -727,6 +785,9 @@ h6 {
   @media screen and (max-width: 768px) {
     .order__form-row {
       margin-bottom: 1.6rem; } }
+  @media screen and (max-width: 480px) {
+    .order__form-row {
+      margin-bottom: 1rem; } }
 
 .order__form-block {
   width: 100%;
@@ -738,6 +799,12 @@ h6 {
   @media screen and (max-width: 768px) {
     .order__form-block {
       margin-left: 5%; } }
+  @media screen and (max-width: 480px) {
+    .order__form-block {
+      margin-left: 2%; } }
+  @media screen and (max-width: 480px) {
+    .order__form-block.floor {
+      display: none; } }
 
 .order__form-label {
   margin-bottom: 0.3125rem; }
@@ -745,7 +812,7 @@ h6 {
 .order__form-input {
   width: 100%;
   border-radius: 5px;
-  height: 35px;
+  height: 2.1875rem;
   border: 1px solid #d1cfcb;
   outline: none;
   padding: 0 1.125rem; }
@@ -753,7 +820,7 @@ h6 {
     border: 2px solid #f9b43b; }
 
 .order__form-input--textarea {
-  height: 110px;
+  height: 6.875rem;
   resize: none;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem; }
@@ -763,6 +830,18 @@ h6 {
   @media screen and (max-width: 768px) {
     .order__form-buttons {
       margin-left: 5%; } }
+  @media screen and (max-width: 480px) {
+    .order__form-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .order__radio {
   position: relative;
@@ -854,6 +933,9 @@ h6 {
   left: 0;
   right: 0;
   padding: 0.4375rem 5.1875rem; }
+  @media screen and (max-width: 480px) {
+    .footer {
+      padding: 0.4375rem 0; } }
 
 .footer__container {
   display: -webkit-box;
@@ -866,9 +948,20 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center; } }
 
 .footer__col {
   width: 50%; }
+
+@media screen and (max-width: 480px) {
+  .footer__col--left {
+    padding: 2% 0; } }
 
 .footer__address {
   margin-bottom: 0.3125rem; }
@@ -888,6 +981,12 @@ h6 {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media screen and (max-width: 480px) {
+    .footer__col--right {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 5px 0; } }
 
 #phone {
   fill: #e45028;

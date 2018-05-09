@@ -117,6 +117,8 @@
 .hero__img, .hero__descr {
   width: 58vw;
   display: block;
+
+ 
 }
 
 .hero__img-pic {
@@ -140,7 +142,9 @@
     width: 70%;
   }
 
-  
+  @include phone {
+    width: 100%;
+  }
 }
 
 .section__title {
@@ -153,6 +157,11 @@
     font-size: 5rem;
     margin: 1rem;
   }
+
+  @include phone {
+    font-size: 4.5rem;
+  }
+
 
   &--hero {
     color: $orange;

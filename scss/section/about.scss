@@ -36,6 +36,11 @@
 .about__list {
     display: flex;
     margin-left: rem(10px);
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+    }
     
 }
 
@@ -48,6 +53,15 @@
     &:not(:last-child) {
     margin-right: rem(31px);
   }
+
+  @include phone {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+    margin-right: rem(31px)
+  }
+ 
 }
 
 
@@ -55,6 +69,13 @@
    margin: 0 auto;
     height: rem(100px);
     margin-bottom: rem(25px);
+
+    @include phone {
+      display: flex;
+      width: 40%;
+      height: 7rem;
+
+    }
 }
 
 .meat {
@@ -75,6 +96,11 @@
       font-size: rem(24px);
       margin-bottom: 0.5em;
       line-height: 1.2;
+
+      @include phone {
+        text-align: left;
+      padding-left: 1.5rem;
+      }
   }
 
   p {
