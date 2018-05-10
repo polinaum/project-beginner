@@ -5,7 +5,7 @@
     align-items: center;
 
     &__container {
-    width: rem(963px);
+    // max-width: rem(963px);
 
     @include tablet {
       padding-bottom: 16%;
@@ -41,7 +41,7 @@
 
     @include tablet {
       flex-direction: column;
-      padding: 0 20%;
+      padding: 0 18%;
       margin-left: -5%;
       font-size: 14px;
     }
@@ -60,6 +60,7 @@
 
     @include tablet { 
       width: 100%;
+      margin: 0;
     }
     @include phone { 
       margin-left: 0;
@@ -75,11 +76,21 @@
 
     @include tablet {
       margin-bottom: 1.6rem;
+      margin-left: 0;
     }
     @include phone {
       margin-bottom: 1rem;
     }
 
+}
+.Rectangle_6 {
+  background-color: rgb(245, 242, 237);
+  position: absolute;
+  left: -3px;
+  top: 6143px;
+  width: 772px;
+  height: 1025px;
+  z-index: 160;
 }
 
 .order__form-block {
@@ -105,6 +116,7 @@
 
 .order__form-label {
     margin-bottom: rem(5px);
+
 }
 
 .order__form-input {
