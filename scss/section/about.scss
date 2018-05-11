@@ -1,5 +1,5 @@
 .about {
-  background-image: url('../../img/bg-about.jpg');
+  background-image: url('../img/bg-about.jpg');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -7,8 +7,12 @@
 
   &__container {
     position: relative;
-    top: 47%;
+    top: 50%;
     transform: translateY(-50%);
+
+    // @include tablet {
+    //   top: 39%;
+    // }
   }
 
   &__content {
@@ -21,14 +25,28 @@
 .section__title--about {
   color: #2f3234;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
+
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+
+  @include phone {
+    font-size: 3.846rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 
 .about__list {
-    display: block;
-    align-content: top;
-    margin-left: 10px;
+    display: flex;
+    margin-left: rem(10px);
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
     
 }
 
@@ -39,40 +57,83 @@
     text-align: center;
 
     &:not(:last-child) {
-    margin-right: 31px;
+    margin-right: rem(31px);
+
+      @include phone {
+        margin-right: 0;
+      }
   }
+
+   @include phone {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 3.5rem;
+    
+
+  }
+ 
 }
 
 
 .about__icon {
    margin: 0 auto;
-    height: 100px;
-    margin-bottom: 25px;
+    height: rem(100px);
+    margin-bottom: rem(25px);
+
+    @include phone {
+      display: flex;
+      width: 30%;
+      height: 7rem;
+
+    }
 }
 
+.about__icon-pic {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+}
 .meat {
-    background: url('../../icons/meat.svg') center no-repeat;
+    background: url('../icons/meat.svg') center no-repeat;
 }
 
 .hand {
-    background:  url('../../icons/hand.svg') center no-repeat;
+    background:  url('../icons/hand.svg') center no-repeat;
 }
 
 .natural {
-  background: url('../../icons/natural.svg') center no-repeat;
+  background: url('../icons/natural.svg') center no-repeat;
 }
 
 .about__descr {
+  @include phone {
+    width: 76%;
+  }
+
   h3 {
     font-family: $lifehack-font;
-      font-size: 24.12px;
+      font-size: rem(24px);
       margin-bottom: 0.5em;
       line-height: 1.2;
+
+      @include phone {
+        text-align: left;
+      // padding-left: 1.5rem;
+      font-size: 1.8769rem;
+      }
   }
 
   p {
       color: #6b6a6a;
       font-weight: 300;
-      line-height: 24px;
+      line-height: rem(24px);
+
+      @include phone {
+        font-size: 1.0769rem;
+      }
   }
 }

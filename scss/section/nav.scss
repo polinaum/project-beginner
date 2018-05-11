@@ -1,19 +1,23 @@
 .nav {
   position:fixed;
-  top: 90px;
-  right: 38px;
+  top: rem(90px);
+  right: rem(38px);
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .nav__item  {
   position: relative;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 5px;
+  width: rem(16px);
+  height: rem(16px);
+  margin-bottom: rem(5px);
 
   &:hover::before, &--active::before {
     content: '';
     position: absolute;
-    @include circle(16px);
+    @include circle(rem(16px));
     background-color: transparent;
     transition: 0.3s;
     cursor: pointer;
@@ -22,7 +26,7 @@
 
 .nav__link  {
   position: absolute;
-  @include circle(6px);
-  top: 5px;
-  left: 5px;
+  @include circle(rem(6px));
+  top: rem(5px);
+  left: rem(5px);
 }

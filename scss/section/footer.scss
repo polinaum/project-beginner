@@ -1,0 +1,65 @@
+.footer {
+    background: url('../img/footer.jpg') center bottom / cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(7px) rem(83px);
+    
+    @include phone {
+      padding: rem(7px) 0;
+    }
+}
+
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include phone {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+  }
+  
+  .footer__col {
+    width: 50%;
+
+  }
+
+  .footer__col--left {
+    @include phone {
+      padding: 2% 0;
+    }
+  }
+  
+  .footer__address {
+    margin-bottom: rem(5px);
+  }
+  
+  .footer__phone {
+    color: $red;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: rem(14px);
+  }
+  
+  .footer__col--right {
+    text-align: right;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    @include phone {
+      justify-content: center;
+      margin: 5px 0;
+    }
+  }
+
+  #phone {
+      fill: $red;
+      margin-right: rem(5px);
+      vertical-align: middle;
+  }
