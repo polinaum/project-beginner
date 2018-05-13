@@ -1,0 +1,58 @@
+.burger {
+	background: #f9b43b; /* Old browsers */
+    background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+	// background: linear-gradient(to bottom,  #f9b43b 0%,#eb8c38 45%,#eb8c38 60%,#eb8c38 75%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.section__title {
+        margin-bottom: rem(15px);
+        line-height: rem(64px);
+	}
+}
+
+.burger__container {
+    display: flex;
+}
+
+.burger__image {
+    width: 50%;  
+}
+
+.burger__image-pic {
+    width: 100%;
+}
+
+.burger__content {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+  
+.composition {
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    background-color: rgb(227, 80, 40);
+    opacity: 0.4;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__icon, &__title {
+    opacity: 1;
+    }
+  }
+  
+  .kkal {
+      position: absolute;
+      bottom: 0;
+  }
