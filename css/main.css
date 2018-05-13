@@ -1105,4 +1105,101 @@ h6 {
   top: 0.3125rem;
   left: 0.3125rem; }
 
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.99);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 100;
+  display: none;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s; }
+  .fullscreen-menu--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.fullscreen-menu__logo {
+  position: absolute;
+  top: 0.625rem;
+  left: 1.875rem; }
+
+.fullscreen-menu__close {
+  position: absolute;
+  right: 0.9375rem;
+  top: 0.9375rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  padding: 0.9375rem;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer; }
+  .fullscreen-menu__close:hover .fullscreen-menu__close-icon {
+    fill: #fff; }
+
+.fullscreen-menu__close-icon {
+  width: 100%;
+  height: 100%;
+  fill: #c1c2c2;
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s; }
+
+.fullscreen-menu__list {
+  margin-top: -15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 110; }
+
+.fullscreen-menu__item {
+  padding-top: 1.375rem; }
+  .fullscreen-menu__item::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    border-radius: 2.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    margin: 0 auto 1.375rem; }
+  .fullscreen-menu__item:first-child::before {
+    display: none; }
+  .fullscreen-menu__item:hover {
+    text-decoration: underline;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+
+.fullscreen-menu__link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem; }
+
 /*# sourceMappingURL=main.css.map */
