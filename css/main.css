@@ -464,6 +464,9 @@ h6 {
   .burger .section__title {
     margin-bottom: 2.625rem;
     line-height: 4rem; }
+    @media screen and (max-width: 768px) {
+      .burger .section__title {
+        margin-bottom: 3.5rem; } }
 
 .burger__container {
   display: -webkit-box;
@@ -474,6 +477,26 @@ h6 {
   -ms-flex-align: center;
   align-items: center;
   margin: 0 0.8125rem; }
+  @media screen and (max-width: 768px) {
+    .burger__container {
+      height: 100%;
+      width: 40rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      margin: auto 39px; } }
+
+@media screen and (max-width: 768px) {
+  .burger__image {
+    padding-top: 6rem; } }
 
 .burger__image-pic {
   width: 100%; }
@@ -488,10 +511,16 @@ h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+  @media screen and (max-width: 768px) {
+    .burger__content {
+      width: 100%; } }
 
 .burger__text {
   line-height: 1.7;
   margin-bottom: 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .burger__text {
+      margin-bottom: 2.25rem; } }
 
 .burger__order {
   display: -webkit-box;
@@ -503,14 +532,20 @@ h6 {
   flex-direction: row;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
-  align-items: baseline; }
+  align-items: baseline;
+  white-space: nowrap; }
+  @media screen and (max-width: 768px) {
+    .burger__order {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .burger__price {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
-  font-size: 4.5rem;
+  font-size: 72px;
   color: #e45028; }
   .burger__price span {
-    font-size: 1.875rem; }
+    font-size: 30px; }
 
 .burger__order-button {
   position: relative;
@@ -540,6 +575,10 @@ h6 {
   justify-content: center; }
   .composition__title {
     font-family: "Gagalin", Arial, Helvetica, sans-serif; }
+  @media screen and (max-width: 768px) {
+    .composition {
+      left: 2.875rem;
+      top: 7.25rem; } }
 
 .kkal {
   position: absolute;
@@ -564,6 +603,13 @@ h6 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .kkal {
+      top: 7.25rem;
+      right: 2.625rem; }
+      .kkal__num {
+        right: 0;
+        top: 2.5rem; } }
 
 .slider-control {
   width: 5%; }
