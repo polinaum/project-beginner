@@ -16,6 +16,12 @@
         margin-bottom: rem(56px);
             
         }
+
+        @include phone {
+            font-size: 50px;
+            width: 99%;
+            margin-bottom: 1.6rem;
+        }
     }
     
 
@@ -30,12 +36,16 @@
     @include tablet {
         // height: rem(780px);
         height: 100%;
-        width: rem(640px);
+        width: 80%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: auto 39px;
+        margin: 0;
+    }
+
+    @include phone {
+        width: 100%;
     }
 }
 
@@ -57,7 +67,7 @@
     flex-direction: column;
 
     @include tablet {
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -67,8 +77,12 @@
 
     @include tablet {
     margin-bottom: rem(36px);
-        
     }
+
+    @include phone {
+    margin-bottom: 1%;
+    }
+
 }
 
 .burger__order {
@@ -86,9 +100,21 @@
     font-family: $title-font;
     font-size: 72px;
     color: $red;
+    
+    @include phone {
+        font-size: 50px;
+    }
     span {
         font-size: 30px;
+
+        @include phone {
+            font-size: 24px;
+        }
     }
+
+    
+   
+    
 }
 
 .burger__order-button {
@@ -118,8 +144,11 @@
     @include tablet {
         // left: 0;
 
-        left: rem(46px);
-        top: rem(116px);
+        // left: rem(46px);
+        // top: rem(116px);
+
+        right: 80%;
+        top: 5%;
     }
   }
   
@@ -142,8 +171,10 @@
       @include tablet {
         // top: 0;
         // right: 0;
-        top: rem(116px);
-        right: rem(42px);
+        // top: rem(116px);
+        // right: rem(42px);
+        left: 90%;
+        top: 5%;
 
         &__num {
             right: 0;

@@ -467,6 +467,11 @@ h6 {
     @media screen and (max-width: 768px) {
       .burger .section__title {
         margin-bottom: 3.5rem; } }
+    @media screen and (max-width: 480px) {
+      .burger .section__title {
+        font-size: 50px;
+        width: 99%;
+        margin-bottom: 1.6rem; } }
 
 .burger__container {
   display: -webkit-box;
@@ -480,7 +485,7 @@ h6 {
   @media screen and (max-width: 768px) {
     .burger__container {
       height: 100%;
-      width: 40rem;
+      width: 80%;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -492,7 +497,10 @@ h6 {
       -ms-flex-align: center;
       align-items: center;
       text-align: center;
-      margin: auto 39px; } }
+      margin: 0; } }
+  @media screen and (max-width: 480px) {
+    .burger__container {
+      width: 100%; } }
 
 @media screen and (max-width: 768px) {
   .burger__image {
@@ -513,7 +521,7 @@ h6 {
   flex-direction: column; }
   @media screen and (max-width: 768px) {
     .burger__content {
-      width: 100%; } }
+      width: 95%; } }
 
 .burger__text {
   line-height: 1.7;
@@ -521,6 +529,9 @@ h6 {
   @media screen and (max-width: 768px) {
     .burger__text {
       margin-bottom: 2.25rem; } }
+  @media screen and (max-width: 480px) {
+    .burger__text {
+      margin-bottom: 1%; } }
 
 .burger__order {
   display: -webkit-box;
@@ -544,8 +555,14 @@ h6 {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
   font-size: 72px;
   color: #e45028; }
+  @media screen and (max-width: 480px) {
+    .burger__price {
+      font-size: 50px; } }
   .burger__price span {
     font-size: 30px; }
+    @media screen and (max-width: 480px) {
+      .burger__price span {
+        font-size: 24px; } }
 
 .burger__order-button {
   position: relative;
@@ -577,8 +594,8 @@ h6 {
     font-family: "Gagalin", Arial, Helvetica, sans-serif; }
   @media screen and (max-width: 768px) {
     .composition {
-      left: 2.875rem;
-      top: 7.25rem; } }
+      right: 80%;
+      top: 5%; } }
 
 .kkal {
   position: absolute;
@@ -605,8 +622,8 @@ h6 {
     font-size: 1.25rem; }
   @media screen and (max-width: 768px) {
     .kkal {
-      top: 7.25rem;
-      right: 2.625rem; }
+      left: 90%;
+      top: 5%; }
       .kkal__num {
         right: 0;
         top: 2.5rem; } }
