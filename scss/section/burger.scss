@@ -9,17 +9,21 @@
 	justify-content: center;
 
 	.section__title {
-        margin-bottom: rem(15px);
+        margin-bottom: rem(42px);
         line-height: rem(64px);
 	}
 }
 
 .burger__container {
     display: flex;
+    height: rem(475px);
+    align-items: center;
+    margin: 0 rem(13px);
 }
 
 .burger__image {
-    width: 50%;  
+    // width: 50%;  
+    
 }
 
 .burger__image-pic {
@@ -27,31 +31,44 @@
 }
 
 .burger__content {
-    width: 50%;
+    width: 52%;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
+.burger__text {
+    line-height: 1.7;
+    margin-bottom: rem(10px);
+}
+
 .burger__order {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 
-.burger__order-price {
+.burger__price {
     font-family: $title-font;
     font-size: rem(72px);
+    color: $red;
     span {
         font-size: rem(30px);
     }
+}
+
+.burger__order-button {
+    position: relative;
+    bottom: rem(3px);
+    left: rem(22px);
 }
   
 .composition {
     position: absolute;
     top: 0;
     border-radius: 5px;
-    background-color: rgb(227, 80, 40);
-    opacity: 0.4;
+    background-color: rgba(227, 80, 40, 0.4);
+    // opacity: 0.4;
     position: absolute;
     width: 90px;
     height: 90px;
@@ -59,13 +76,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    &__icon, &__title {
-    opacity: 1;
+    
+    &__title {
+    font-family: $title-font;
     }
   }
   
   .kkal {
       position: absolute;
       bottom: 0;
+      opacity: 0.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $title-font;
+      &__num {
+          position: absolute;
+          left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem(20px);
+      }
+     
   }
+
+  .slider-control {
+      width: 5%;
+    //   height: 100%;
+  }
+
+  .slider-arrow  {
+    //   width: 5%;
+    //   width: 14.5px; 
+      
+    //   margin: 50%;
+
+      &__icon {
+        width: 28.685px; 
+        height: 14.479px;
+      }
+
+      &--left {
+        transform: rotate(90deg); 
+      }
+
+      &--right {
+        transform: rotate(-90deg); 
+      }
+  }
+
+  
+
+  
+  
