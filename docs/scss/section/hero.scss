@@ -1,0 +1,225 @@
+
+.hero {
+  background-image: url('../img/bckgr.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+
+  &__container {
+    height: 100%;
+  }
+}
+
+.header {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  padding-top: rem(13px);
+
+  @include tablet {
+    padding-top: 0.5rem; 
+    // width: 95%;
+ }
+
+  &__left {
+    float: left;
+    width: 10%;
+  }
+
+  &__right {
+    float: left;
+    width: 90%;
+    text-align:right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include tablet {
+      width: 88%;
+    }
+  }
+
+  
+}
+
+
+.top-menu {
+  // position: relative;
+  vertical-align: middle;
+  padding-top:rem(20px);
+  display: inline-block;
+  margin-right: 1.4rem;
+
+  @include tablet {
+    display: none;
+  }
+  
+  // &--visible {
+     
+  //   display: flex;
+  //   position: 
+  //   z-index: 110;
+
+  //   .top-menu__list {
+  //   display: flex;
+  //   flex-direction: column;
+
+    
+  //   .top-menu__item {
+
+  //   }
+  // }
+  // }
+
+  
+  &__item {
+    display: inline-block;
+    position: relative;
+    margin-left: rem(16px);
+  
+    &::before {
+      content: "";
+      @include circle(rem(5px));
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(10px);
+      margin-top: rem(-2px);
+    }
+  
+    &:first-child::before {
+      display: none;
+    }
+  
+    &:hover {
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+  }
+  
+  &__link  {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: rem(13px);
+  }
+}
+
+
+
+
+.hero__content {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  padding-bottom: 20%;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    padding-bottom: 33%;
+  }
+}
+
+
+// .hero__img, .hero__descr {
+//   width: 50%;
+//   display: inline-block;
+//   float:left;
+// } 
+
+.hero__img, .hero__descr {
+  width: 58vw;
+  display: block;
+}
+
+.hero__img {
+  @include phone {
+    width: 78%;
+    margin-bottom: 3rem;
+  }
+}
+
+.hero__img-pic {
+  margin-top: rem(15px);
+  margin-left: rem(16px);
+  max-width: 100%;
+  max-height: 100%;
+
+  @include tablet {
+    margin: 0 0 0 0;
+  }
+}
+
+.hero__descr {
+  padding: 9% 0 0 2%;
+  text-align: left;
+
+  @include tablet {
+    padding: 0 0;
+    text-align: center;
+    width: 90%;
+  }
+
+  @include phone {
+    width: 100%;
+    
+  }
+}
+
+.section__title {
+  
+  font-family: $title-font;
+  font-size: rem(72px);
+  margin-bottom: rem(10px);
+
+  @include tablet {
+    font-size: 5rem;
+    margin: 1rem;
+  }
+
+  @include phone {
+    font-size: 4.5rem;
+    margin: 0rem;
+  }
+
+
+  &--hero {
+    color: $orange;
+
+    @include phone {
+      font-size: 4.846rem;
+    }
+  }
+}
+
+.hero__descr-text {
+  position: relative;
+  font-family: $lifehack-font;
+  font-size: rem(65px);
+  line-height: 0.95;
+  letter-spacing: rem(-1px);
+
+  @include phone {
+    font-size: 4.15rem;
+  }
+}
+
+.arrow  {
+  width: 100%;
+  bottom: rem(37px);
+  position: absolute;
+  text-align: center;
+
+  &__link {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
+

@@ -1,0 +1,71 @@
+html {
+  @include desktop {
+    font-size: 16px;
+  }
+
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include phone {
+    font-size: 13px;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  }
+  
+  html, body {
+  height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 1.42;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+  }
+  
+  img {
+    border-style: none;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    margin: 0; 
+    }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+    margin: 0;
+  }
+    
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: rem(1px); width: rem(1px);
+    margin: rem(-1px);
+    padding: 0;
+    border: 0;
+    }
