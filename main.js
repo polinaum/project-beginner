@@ -12,3 +12,12 @@ closeButton.addEventListener('click', function(event){
     event.preventDefault(); 
     fullscreen.classList.remove('fullscreen-menu--visible');
 });
+
+const menuTrigger = document.querySelectorAll('.menu-acc__trigger');
+const menuItem = document.querySelectorAll('.menu-acc__item');
+
+menuTrigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.target 
+    menuItem.classList.add('menu-acc__item--active');
+});
