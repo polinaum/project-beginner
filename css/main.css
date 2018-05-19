@@ -631,19 +631,19 @@ h6 {
 .slider-control {
   width: 5%; }
 
-.slider-arrow__icon {
-  width: 28.685px;
-  height: 14.479px; }
-
-.slider-arrow--left {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
-.slider-arrow--right {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+.slider-arrow {
+  cursor: pointer; }
+  .slider-arrow__icon {
+    width: 28.685px;
+    height: 14.479px; }
+  .slider-arrow--left {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .slider-arrow--right {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
 
 .reviews__list {
   height: 100%; }
