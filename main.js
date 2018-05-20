@@ -54,9 +54,9 @@ menu.addEventListener('click', function(e){
     for (let i=0; i<menuItem.length; i++) {
         if (menuItem[i].classList.contains('menu-acc__item--active')){
             menuItem[i].classList.remove('menu-acc__item--active');
-            // if (vw < 769) {
-            // accoContent[i].style.width = 0;
-            // }
+            if (vw < 769) {
+            accoContent[i].style.width = 0;
+            }
         }
     }
 });
@@ -107,19 +107,6 @@ showSlides(slideIndex);
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
-
-prev.onclick = plusSlides(-1);
-next.onclick = plusSlides(1);
-
-
-
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
 
 
 function showSlides(n) {
