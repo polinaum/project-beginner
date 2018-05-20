@@ -27,8 +27,8 @@
 
 }
 
-.burger__container {
-    display: flex;
+.burger__slide {
+    display: none;
     height: rem(475px);
     align-items: center;
     margin: 0 rem(13px);
@@ -50,14 +50,15 @@
 }
 
 .burger__image {
-    // width: 50%;  
+    width: 48%;  
     @include tablet {
         padding-top: 6rem;
+        width: 70%;
     }
 }
 
 .burger__image-pic {
-    width: 100%;
+    width: 94%;
 }
 
 .burger__content {

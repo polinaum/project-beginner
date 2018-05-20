@@ -83,25 +83,53 @@ for (let i=0; i<teamItem.length; i++) {
         e.stopPropagation();
         if (teamItem[i].classList.contains('team-acc__item--active')){
             teamItem[i].classList.remove('team-acc__item--active');
-            // if (vw < 769) {
-            // accoContent[i].style.width = 0;
-            // }
         } else {
             for (let i=0; i<teamItem.length; i++) {
                 if (teamItem[i].classList.contains('team-acc__item--active')){
                     teamItem[i].classList.remove('team-acc__item--active');
-                    // if (vw < 769) {
-                    //     accoContent[i].style.width = 0;
-                    // }
                 }
             }       
-            teamItem[i].classList.add('team-acc__item--active');
-
-            // if ( vw < 769 ) {
-            // accoContent[i].style.width = getWidth + 'px';
-            // }
+        teamItem[i].classList.add('team-acc__item--active');
         };
         
         
     });
 };
+
+//burger slider
+
+var prev = document.getElementsByClassName('slider-arrow--left');
+var next = document.getElementsByClassName('slider-arrow--right');
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+
+prev.onclick = plusSlides(-1);
+next.onclick = plusSlides(1);
+
+
+
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("burger__slide");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    
+    slides[slideIndex-1].style.display = "flex"; 
+  }
