@@ -13,11 +13,65 @@ closeButton.addEventListener('click', function(event){
     fullscreen.classList.remove('fullscreen-menu--visible');
 });
 
-const menuTrigger = document.querySelectorAll('.menu-acc__trigger');
-const menuItem = document.querySelectorAll('.menu-acc__item');
+//вертикальный аккордеон
 
-menuTrigger.addEventListener('click', function(e) {
+const menu = document.querySelector('.menu');
+const menuItem = document.querySelectorAll('.menu-acc__item');
+const menuTrigger = document.querySelectorAll('.menu-acc__trigger');
+const acco = document.querySelector('.menu-acc');
+
+
+for (let i=0; i<menuItem.length; i++) {
+    menuItem[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (menuItem[i].classList.contains('menu-acc__item--active')){
+            menuItem[i].classList.remove('menu-acc__item--active');
+            if (vw < 769) {
+            accoContent[i].style.width = 0;
+            }
+        } else {
+            for (let i=0; i<menuItem.length; i++) {
+                if (menuItem[i].classList.contains('menu-acc__item--active')){
+                    menuItem[i].classList.remove('menu-acc__item--active');
+                    if (vw < 769) {
+                        accoContent[i].style.width = 0;
+                    }
+                }
+            }       
+            menuItem[i].classList.add('menu-acc__item--active');
+
+            if ( vw < 769 ) {
+            accoContent[i].style.width = getWidth + 'px';
+            }
+        };
+        
+        
+    });
+};
+
+
+menu.addEventListener('click', function(e){
     e.preventDefault();
-    e.target 
-    menuItem.classList.add('menu-acc__item--active');
+    for (let i=0; i<menuItem.length; i++) {
+        if (menuItem[i].classList.contains('menu-acc__item--active')){
+            menuItem[i].classList.remove('menu-acc__item--active');
+            // if (vw < 769) {
+            // accoContent[i].style.width = 0;
+            // }
+        }
+    }
 });
+
+//динамическая ширина контента
+
+var vw = window.innerWidth;
+console.log(vw);
+const accoContent = document.querySelectorAll('.menu-acc__content');
+
+for (let i=0; i<menuItem.length; i++) {
+    var style = getComputedStyle(menuItem[i]);
+}
+var getWidth = vw - parseInt(style.width) * menuItem.length;
+console.log(getWidth);
+
