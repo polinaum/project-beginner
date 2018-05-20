@@ -20,7 +20,7 @@
     background: rgba(#2f3234, .93);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     @include tablet {
@@ -32,7 +32,17 @@
 
 .team__content  {
     padding: 0 18%;
-    margin-top: -7%;
+    margin-top: 16%;
+
+    @include tablet {
+        padding: 0 30%;
+        margin-top: 23%;
+    }
+
+    @include phone {
+        padding-top: 5%;
+    }
+
 }
 
 //accordeon
@@ -65,7 +75,7 @@
             color: $orange;
 
             &:before {
-                transform: rotate(180deg);
+                transform: rotate(180deg) translateY(50%);
             }
         }
 
@@ -98,7 +108,7 @@
          display: block;
          position: absolute;
          left: rem(-18px);
-         top: rem(8px);
+        //  top: rem(8px);
          width: rem(7px);
          height: rem(7px);
      }
@@ -128,7 +138,7 @@
      @include tablet   {
     align-items: center;
     flex-direction: column;
-    width: 23rem;
+    // width: 23rem;
     }
  }
 

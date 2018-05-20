@@ -13,12 +13,10 @@ closeButton.addEventListener('click', function(event){
     fullscreen.classList.remove('fullscreen-menu--visible');
 });
 
-//вертикальный аккордеон
+//горизонтальный аккордеон
 
 const menu = document.querySelector('.menu');
 const menuItem = document.querySelectorAll('.menu-acc__item');
-const menuTrigger = document.querySelectorAll('.menu-acc__trigger');
-const acco = document.querySelector('.menu-acc');
 
 
 for (let i=0; i<menuItem.length; i++) {
@@ -75,3 +73,35 @@ for (let i=0; i<menuItem.length; i++) {
 var getWidth = vw - parseInt(style.width) * menuItem.length;
 console.log(getWidth);
 
+//вертикальный аккордеон
+
+const teamItem = document.querySelectorAll('.team-acc__item');
+
+for (let i=0; i<teamItem.length; i++) {
+    teamItem[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (teamItem[i].classList.contains('team-acc__item--active')){
+            teamItem[i].classList.remove('team-acc__item--active');
+            // if (vw < 769) {
+            // accoContent[i].style.width = 0;
+            // }
+        } else {
+            for (let i=0; i<teamItem.length; i++) {
+                if (teamItem[i].classList.contains('team-acc__item--active')){
+                    teamItem[i].classList.remove('team-acc__item--active');
+                    // if (vw < 769) {
+                    //     accoContent[i].style.width = 0;
+                    // }
+                }
+            }       
+            teamItem[i].classList.add('team-acc__item--active');
+
+            // if ( vw < 769 ) {
+            // accoContent[i].style.width = getWidth + 'px';
+            // }
+        };
+        
+        
+    });
+};
