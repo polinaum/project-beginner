@@ -98,10 +98,11 @@ for (let i=0; i<teamItem.length; i++) {
 
 //burger slider
 
-var prev = document.getElementsByClassName('slider-arrow--left');
-var next = document.getElementsByClassName('slider-arrow--right');
+var prev = document.querySelector('slider-arrow--left');
+var next = document.querySelector('slider-arrow--right');
 var slideIndex = 1;
 showSlides(slideIndex);
+
 
 // Next/previous controls
 function plusSlides(n) {

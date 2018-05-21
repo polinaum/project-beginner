@@ -21,11 +21,13 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
 
     @include tablet {
      width: 100%;
     text-align: center; 
+    align-items: center;
+    
     }
 
 }
@@ -119,7 +121,7 @@
 		border-right: rem(5px) solid transparent;
 		border-bottom: rem(0px) solid transparent;
 		transform: rotate(0deg);
-		transition: .3s;
+		// transition: .3s;
      }
 
     //  &:after {
