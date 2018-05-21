@@ -684,7 +684,7 @@ h6 {
     .reviews__text {
       display: none; } }
 
-.more-link {
+.reviews__view {
   text-transform: uppercase;
   color: #fff;
   border-radius: 0.3125rem;
@@ -1379,9 +1379,7 @@ h6 {
   right: 0;
   bottom: 0;
   background: rgba(47, 50, 52, 0.9);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

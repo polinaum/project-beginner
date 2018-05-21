@@ -121,3 +121,37 @@ function showSlides(n) {
     
     slides[slideIndex-1].style.display = "flex"; 
   }
+
+  //popup review
+  const reviews = document.querySelector(".reviews__list");
+  const openBttn = document.querySelectorAll(".reviews__view");
+  const reviewPopup = document.querySelector(".full-review");
+
+  for (i=0; i<openBttn.length; i++) {
+    openBttn[i].addEventListener('click', function(e) {
+        // console.log(e.target.parentNode);
+        console.log(e.target);
+        console.log(openBttn);
+        
+        //  if(e.target.classList.contains('reviews__view') {
+       
+        reviewPopup.style.display="flex";
+        // }
+    
+    });
+
+};
+
+  const closePopup = document.querySelector(".full-review__close");
+    closePopup.addEventListener('click', function(e) {
+        e.preventDefault();
+        reviewPopup.style.display="none";
+    })
+
+
+
+  window.addEventListener('click', function(e) {
+      if (e.target == reviewPopup) {
+        reviewPopup.style.display="none";
+      }
+  })
