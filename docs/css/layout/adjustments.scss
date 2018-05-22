@@ -1,0 +1,43 @@
+[href] {
+  text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  min-height: rem(650px);
+}
+
+
+.section {
+  height: 100vh;
+  min-height: rem(650px);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+}
+
+.hidden {
+  display: none;
+}
