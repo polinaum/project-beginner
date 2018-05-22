@@ -82,7 +82,9 @@
         }
 
         .team-acc__content {
-            display: flex;
+            height: rem(100px);
+            transition: height .2s ease-out;
+            
         }
 
      }
@@ -134,8 +136,11 @@
  }
 
  .team-acc__content {
-     display: none;
+     display: flex;
      overflow: hidden;
+     height: 0;
+     transition: height .2s ease-out;
+     
 
      @include tablet   {
     align-items: center;

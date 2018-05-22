@@ -613,7 +613,11 @@ h6 {
   width: 5%; }
 
 .slider-arrow {
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .slider-arrow__icon {
     width: 28.685px;
     height: 14.479px; }
@@ -767,9 +771,9 @@ h6 {
       -webkit-transform: rotate(180deg) translateY(50%);
               transform: rotate(180deg) translateY(50%); }
   .team-acc__item--active .team-acc__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    height: 6.25rem;
+    -webkit-transition: height .2s ease-out;
+    transition: height .2s ease-out; }
 
 .team-acc__trigger {
   color: #fff;
@@ -806,8 +810,13 @@ h6 {
             transform: rotate(0deg); }
 
 .team-acc__content {
-  display: none;
-  overflow: hidden; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height .2s ease-out;
+  transition: height .2s ease-out; }
   @media screen and (max-width: 768px) {
     .team-acc__content {
       -webkit-box-align: center;
@@ -879,7 +888,9 @@ h6 {
   .menu-acc__item--active .menu-acc__trigger-name {
     color: #f9b43b; }
   .menu-acc__item--active .menu-acc__content {
-    width: 34.375rem; }
+    width: 34.375rem;
+    -webkit-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out; }
   .menu-acc__item--active .menu-acc__text {
     display: inline-block;
     -webkit-animation: acc-text .3s linear forwards;
@@ -929,7 +940,9 @@ h6 {
   float: left;
   background: rgba(47, 50, 52, 0.93);
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out; }
 
 .menu-acc__text {
   color: #fff;

@@ -187,14 +187,11 @@
 
   .slider-control {
       width: 5%;
-    //   height: 100%;
-  }
+  }               
 
   .slider-arrow  {
-    //   width: 5%;
-    //   width: 14.5px; 
       cursor: pointer;
-    //   margin: 50%;
+      user-select: none;
 
       &__icon {
         width: 28.685px; 
