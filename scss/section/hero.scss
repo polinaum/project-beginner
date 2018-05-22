@@ -55,7 +55,25 @@
   @include tablet {
     display: none;
   }
+  
+  // &--visible {
+     
+  //   display: flex;
+  //   position: 
+  //   z-index: 110;
 
+  //   .top-menu__list {
+  //   display: flex;
+  //   flex-direction: column;
+
+    
+  //   .top-menu__item {
+
+  //   }
+  // }
+  // }
+
+  
   &__item {
     display: inline-block;
     position: relative;
