@@ -1,6 +1,7 @@
 const hamburger = document.querySelector('.hamburger-menu-link');
 const fullscreen = document.querySelector('.fullscreen-menu');
 const closeButton = document.querySelector('.fullscreen-menu__close');
+const fullscreenLink = document.querySelectorAll('.fullscreen-menu__item');
 
 
 hamburger.addEventListener('click', function(event) {
@@ -12,6 +13,14 @@ closeButton.addEventListener('click', function(event){
     event.preventDefault(); 
     fullscreen.classList.remove('fullscreen-menu--visible');
 });
+
+for (i=0; i<fullscreen.length; i++) {
+    fullscreenLink[i].addEventListener('click', function(event){
+    event.preventDefault(); 
+    fullscreen.classList.remove('fullscreen-menu--visible');
+});}
+
+
 
 //горизонтальный аккордеон
 
@@ -155,3 +164,116 @@ function showSlides(n) {
         reviewPopup.style.display="none";
       }
   })
+
+
+//One Page Scroll
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile;
+
+const setActiveMenuItem = itemEq => {
+    $('.nav__item')
+    .eq(itemEq)
+    .addClass('nav__item--active')
+    .siblings()
+    .removeClass('nav__item--active');
+}
+
+const performTransition = sectionEq => {
+    const position = `${-sectionEq * 100}%`;
+    
+    if (inScroll) return;
+    inScroll = true;
+    
+    sections
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
+
+    console.log();
+    
+
+    display.css ({
+        transform: `translateY(${position})`,
+        '-webkit-transform' : `translateY(${position})`
+    });
+
+
+    const transitionDuration = parseInt(display.css('transition-duration')) * 1000; 
+    setTimeout (() => {
+        inScroll = false;
+        setActiveMenuItem(sectionEq);
+	}, transitionDuration + 300); // зв 300мс проходит инерция мышки
+};
+
+const scrollToSection = direction => {
+    const activeSection = sections.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    // switch (direction) {
+    //     case 'up' :
+    //         performTransition(prevSection.index());
+    //         break;
+    //     case 'down' :
+    //          performTransition(nextSection.index());
+    //         break;
+    // }
+
+    if (direction == "up" && prevSection.length) {
+        performTransition(prevSection.index());
+    }
+    if (direction == "down" && nextSection.length) {
+        performTransition(nextSection.index());
+    }
+    
+};
+
+$(document).on({
+    wheel: e => {
+        const deltaY = e.originalEvent.deltaY;
+        const direction = deltaY > 0
+            ? 'down'
+            : 'up'
+        scrollToSection(direction);
+         
+    },
+
+    keydown: e => {
+        switch (e.keyCode) {
+            case 40:
+            scrollToSection('down');
+            break;
+            case 38:
+            scrollToSection('up');
+            break;
+        }
+    },
+
+    touchmove: e => e.preventDefault()
+});
+
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+    // const target = $(e.currentTarget).data('scroll-to');
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+    performTransition(target);
+})
+
+//Mobile
+
+
+if (isMobile) {
+    
+    $(document).swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    const swipeDirection = direction == 'down' ? 'up' : 'down';
+    scrollToSection(swipeDirection);
+    //   $(this).text("You swiped " + direction );  
+    }
+  });
+}
