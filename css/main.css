@@ -91,8 +91,8 @@ h6 {
 .maincontent {
   height: 100%;
   min-height: 40.625rem;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .8s;
+  transition: .8s;
   will-change: transform; }
 
 .section {

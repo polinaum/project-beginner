@@ -1,7 +1,6 @@
 const hamburger = document.querySelector('.hamburger-menu-link');
 const fullscreen = document.querySelector('.fullscreen-menu');
 const closeButton = document.querySelector('.fullscreen-menu__close');
-const fullscreenLink = document.querySelectorAll('.fullscreen-menu__item');
 
 
 hamburger.addEventListener('click', function(event) {
@@ -13,12 +12,6 @@ closeButton.addEventListener('click', function(event){
     event.preventDefault(); 
     fullscreen.classList.remove('fullscreen-menu--visible');
 });
-
-for (i=0; i<fullscreen.length; i++) {
-    fullscreenLink[i].addEventListener('click', function(event){
-    event.preventDefault(); 
-    fullscreen.classList.remove('fullscreen-menu--visible');
-});}
 
 
 
@@ -170,8 +163,9 @@ function showSlides(n) {
 const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
+
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile;
+const isMobile = mobileDetect.mobile();
 
 const setActiveMenuItem = itemEq => {
     $('.nav__item')
@@ -193,19 +187,16 @@ const performTransition = sectionEq => {
     .siblings()
     .removeClass('active');
 
-    console.log();
-    
-
     display.css ({
         transform: `translateY(${position})`,
         '-webkit-transform' : `translateY(${position})`
     });
 
+    setActiveMenuItem(sectionEq);
 
     const transitionDuration = parseInt(display.css('transition-duration')) * 1000; 
     setTimeout (() => {
         inScroll = false;
-        setActiveMenuItem(sectionEq);
 	}, transitionDuration + 300); // зв 300мс проходит инерция мышки
 };
 
@@ -213,15 +204,6 @@ const scrollToSection = direction => {
     const activeSection = sections.filter('.active');
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
-
-    // switch (direction) {
-    //     case 'up' :
-    //         performTransition(prevSection.index());
-    //         break;
-    //     case 'down' :
-    //          performTransition(nextSection.index());
-    //         break;
-    // }
 
     if (direction == "up" && prevSection.length) {
         performTransition(prevSection.index());
@@ -239,9 +221,7 @@ $(document).on({
             ? 'down'
             : 'up'
         scrollToSection(direction);
-         
     },
-
     keydown: e => {
         switch (e.keyCode) {
             case 40:
@@ -252,7 +232,6 @@ $(document).on({
             break;
         }
     },
-
     touchmove: e => e.preventDefault()
 });
 
@@ -261,7 +240,17 @@ $('[data-scroll-to]').on('click', e => {
     // const target = $(e.currentTarget).data('scroll-to');
     const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
     performTransition(target);
-})
+
+    if (isMobile) {
+    fullscreen.classList.remove('fullscreen-menu--visible');
+    }
+});
+
+
+$('.arrow__link').on('click', e => {
+    e.preventDefault();
+    performTransition(1);
+});
 
 //Mobile
 
