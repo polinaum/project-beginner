@@ -124,16 +124,20 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "flex"; 
   }
 
-  //popup review
+  //reviews popup
   const reviews = document.querySelector(".reviews__list");
   const openBttn = document.querySelectorAll(".reviews__view");
+  const popupText = document.querySelector('.full-review__content');
   const reviewPopup = document.querySelector(".full-review");
 
   for (i=0; i<openBttn.length; i++) {
     openBttn[i].addEventListener('click', function(e) {
         // console.log(e.target.parentNode);
         console.log(e.target);
-        console.log(openBttn);
+        console.log(e.target.parentNode.previousElementSibling.innerHTML);
+
+        let modalText = e.target.parentNode.previousElementSibling.innerHTML;
+        popupText.innerHTML = modalText;
         
         //  if(e.target.classList.contains('reviews__view') {
        
