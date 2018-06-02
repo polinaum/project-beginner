@@ -59,6 +59,10 @@ html {
     font-weight: normal;
     margin: 0;
   }
+
+  button:focus {
+    outline: none;
+  }
     
   .visually-hidden {
     position: absolute;

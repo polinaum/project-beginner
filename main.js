@@ -132,18 +132,9 @@ function showSlides(n) {
 
   for (i=0; i<openBttn.length; i++) {
     openBttn[i].addEventListener('click', function(e) {
-        // console.log(e.target.parentNode);
-        console.log(e.target);
-        console.log(e.target.parentNode.previousElementSibling.innerHTML);
-
         let modalText = e.target.parentNode.previousElementSibling.innerHTML;
         popupText.innerHTML = modalText;
-        
-        //  if(e.target.classList.contains('reviews__view') {
-       
         reviewPopup.style.display="flex";
-        // }
-    
     });
 
 };
@@ -270,3 +261,49 @@ if (isMobile) {
     }
   });
 }
+
+// order form 
+
+$('#order-form').on('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    var form = $(e.target),
+        data = form.serialize(),
+        type = form.attr('method'),
+        url = form.attr('action');
+
+    console.log(data);
+    console.log(type);
+    console.log(url);
+
+    var request = $.ajax ({
+        type: type,
+        url: url,
+        dataType: 'JSON',
+        data: data
+    });
+
+    request.done (function(msg){
+        alert(msg);
+
+        // var mes = msg.mes,
+        // status = msg.status;
+        // if (status === 'OK') {
+        //     form.append('<p class="success>' + mes + '</p>');
+        // } else {
+        //     form.append('<p class="error>' + mes + '</p>');
+        // }
+    });
+
+    request.fail(function(jqXHR, textStatus){
+        alert("Request failed: " + textStatus);
+    })
+
+};
+
+
+
+
+
