@@ -14,6 +14,10 @@ html {
   @include phone {
     font-size: 13px;
   }
+
+  @include small-phone {
+    font-size: 11px;
+  }
 }
 
 *, *::before, *::after {

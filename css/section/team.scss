@@ -44,6 +44,9 @@
     @include phone {
         padding-top: 5%;
     }
+    @include small-phone {
+        padding-top: 0;
+    }
 
 }
 
@@ -53,9 +56,9 @@
     margin-left: rem(17px);
 
     @include tablet {
-        display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+    //     display: inline-flex;
+    // flex-direction: column;
+    // align-items: center;
     }
  }
 
@@ -82,7 +85,7 @@
         }
 
         .team-acc__content {
-            height: rem(100px);
+            height: rem(230px);
             transition: height .2s ease-out;
             
         }
@@ -151,7 +154,7 @@
 
  .team-acc__pic {
      flex-basis: 100%;
-     max-width: 100px;
+     max-width: rem(100px);
      overflow: hidden;
      flex: 1;
 
@@ -159,8 +162,8 @@
  }
 
  .team-acc__img {
-     width: 100px;
-     height: 100px;
+     width: rem(100px);
+     height: rem(100px);
      border-radius: 50%;
      background: center / cover no-repeat;
 

@@ -319,8 +319,6 @@ function submitForm(e) {
         orderPopup.style.display="none";
     });
 
-
-
   window.addEventListener('click', function(e) {
       if (e.target == orderPopup) {
         reviewPopup.style.display="none";
