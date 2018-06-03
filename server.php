@@ -44,11 +44,11 @@
     $data = [];
 
     if ($mail) {
-        $data['status'] = "OK";
-        $data['meg'] = "Письмо успешно отправлено";
+        $data['status'] = "true";
+        $data['mes'] = "Сообщение отправлено";
     }else{
-        $data['status'] = "NO";
-        $data['meg'] = "На сервере произошла ошибка";
+        $data['status'] = "false";
+        $data['mes'] = "На сервере произошла ошибка";
     }
 
     echo json_encode($data);

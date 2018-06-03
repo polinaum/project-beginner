@@ -286,14 +286,15 @@ button:focus {
       -ms-flex-align: center;
           align-items: center; }
 
-.order-link {
+.order-link, .order__form-button, .order-alert__close {
   border-radius: 5px;
   background-color: #e45028;
   color: #fff;
   text-transform: uppercase;
   font-size: 13px;
   height: 100%;
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  cursor: pointer; }
 
 .hamburger-menu-link {
   position: relative;
@@ -1149,14 +1150,7 @@ button:focus {
 
 .order__form-button {
   margin-right: 1.25rem;
-  border: 0;
-  background: #e45028;
-  font-size: 13px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  color: #ffffff;
-  padding: 10px 15px;
-  cursor: pointer; }
+  border: 0; }
 
 .order__form-button_reset {
   padding-left: 0;
@@ -1407,13 +1401,18 @@ button:focus {
           align-items: center;
   z-index: 1000; }
 
-.full-review__inner {
+.full-review__inner, .order-alert__inner {
   border-radius: 5px;
   background-color: white;
   width: 460px;
   color: #2f3234;
   padding: 25px 20px;
   position: relative; }
+
+.order-alert__inner {
+  width: 210px;
+  text-align: center;
+  padding: 20px 20px; }
 
 .full-review__title {
   font-family: "Gagalin", Arial, Helvetica, sans-serif;
@@ -1441,5 +1440,11 @@ button:focus {
     width: 100%;
     height: 100%;
     fill: #ec8468; }
+
+.order-alert__close {
+  display: inline-block; }
+
+.order-alert__message {
+  margin-bottom: 13px; }
 
 /*# sourceMappingURL=main.css.map */

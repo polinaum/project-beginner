@@ -247,6 +247,13 @@ $('.arrow__link').on('click', e => {
     performTransition(1);
 });
 
+$('.order-link').on('click', e => {
+    e.preventDefault();
+    performTransition(6);
+});
+
+
+
 //Mobile
 
 
@@ -286,24 +293,39 @@ function submitForm(e) {
     });
 
     request.done (function(msg){
-        alert(msg);
+        // alert(msg);
+        var mes = msg.mes,
+        status = msg.status;
 
-        // var mes = msg.mes,
-        // status = msg.status;
-        // if (status === 'OK') {
-        //     form.append('<p class="success>' + mes + '</p>');
-        // } else {
-        //     form.append('<p class="error>' + mes + '</p>');
-        // }
+        orderPopup.style.display="flex";
+        alertText.textContent = mes;
+        
     });
 
     request.fail(function(jqXHR, textStatus){
-        alert("Request failed: " + textStatus);
+        orderPopup.style.display="flex";
+        alertText.textContent="Произошла ошибка";
     })
-
 };
 
+//order popup
 
+  const closeBttn = document.querySelector(".order-alert__close");
+  const alertText = document.querySelector('.order-alert__message');
+  const orderPopup = document.querySelector(".order-alert");
+
+    closeBttn.addEventListener('click', function(e) {
+        e.preventDefault();
+        orderPopup.style.display="none";
+    });
+
+
+
+  window.addEventListener('click', function(e) {
+      if (e.target == orderPopup) {
+        reviewPopup.style.display="none";
+      }
+  });
 
 
 

@@ -232,16 +232,9 @@
   }
 
   .order__form-button {
+    @extend .order-link; 
     margin-right: rem(20px);
     border: 0;
-    background: $red;
-    font-size: 13px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    color: #ffffff;
-    
-    padding: 10px 15px;
-    cursor: pointer;
   }
   
   .order__form-button_reset {
