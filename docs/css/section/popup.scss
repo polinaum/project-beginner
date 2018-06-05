@@ -16,14 +16,20 @@
 // 	position: relative;
 // }
 
-.full-review__inner {
+.full-review__inner, .order-alert__inner {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     width: 460px;
-	height: 254px;
+	// height: 254px;
 	color: #2f3234;
 	padding: 25px 20px;
 	position: relative;
+}
+
+.order-alert__inner {
+	width: 210px;
+	text-align: center;
+	padding: 20px 20px;
 }
 
 .full-review__title {
@@ -58,4 +64,12 @@
         fill: #ec8468;
 	}
 }
-  
+
+.order-alert__close {
+	@extend .order-link; 
+	display: inline-block;
+}
+
+.order-alert__message {
+margin-bottom: 13px;
+}

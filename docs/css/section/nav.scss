@@ -1,7 +1,7 @@
 .nav {
   position:fixed;
   top: rem(90px);
-  right: rem(38px);
+  right: rem(50px);
 
   @include tablet {
     display: none;
