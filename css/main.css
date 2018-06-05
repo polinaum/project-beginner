@@ -148,7 +148,8 @@ button:focus {
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    margin-top: -8px; }
     @media screen and (max-width: 768px) {
       .header__right {
         width: 88%; } }
@@ -189,7 +190,7 @@ button:focus {
     font-size: 0.8125rem; }
 
 .hero__content {
-  top: 50%;
+  top: 44%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: relative;
@@ -335,7 +336,7 @@ button:focus {
   position: relative; }
   .about__container {
     position: relative;
-    top: 50%;
+    top: 47%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
   .about__content {
@@ -492,7 +493,7 @@ button:focus {
       width: 100%; } }
 
 .burger__image {
-  width: 48%; }
+  width: 54%; }
   @media screen and (max-width: 768px) {
     .burger__image {
       padding-top: 6rem;
@@ -716,6 +717,9 @@ button:focus {
   .team .section__title {
     color: #f9b43b;
     margin-bottom: 1.75rem; }
+    @media screen and (max-width: 480px) {
+      .team .section__title {
+        margin-bottom: 0; } }
 
 .team__container {
   position: absolute;
@@ -754,7 +758,7 @@ button:focus {
       margin-top: 23%; } }
   @media screen and (max-width: 480px) {
     .team__content {
-      padding-top: 5%; } }
+      padding: 5%; } }
   @media screen and (max-width: 375px) {
     .team__content {
       padding-top: 0; } }
@@ -763,7 +767,7 @@ button:focus {
   margin-left: 1.0625rem; }
 
 .team-acc__item {
-  margin-bottom: 2.1875rem; }
+  margin-bottom: 1.25rem; }
   .team-acc__item:last-child {
     margin-bottom: 0; }
   .team-acc__item--active .team-acc__trigger {
@@ -772,9 +776,12 @@ button:focus {
       -webkit-transform: rotate(180deg) translateY(50%);
               transform: rotate(180deg) translateY(50%); }
   .team-acc__item--active .team-acc__content {
-    height: 14.375rem;
+    height: 7.1875rem;
     -webkit-transition: height .2s ease-out;
     transition: height .2s ease-out; }
+    @media screen and (max-width: 768px) {
+      .team-acc__item--active .team-acc__content {
+        height: 100%; } }
 
 .team-acc__trigger {
   color: #fff;
@@ -831,15 +838,18 @@ button:focus {
 .team-acc__pic {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  max-width: 6.25rem;
+  max-width: 100px;
   overflow: hidden;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+  @media screen and (max-width: 768px) {
+    .team-acc__pic {
+      margin-bottom: 18px; } }
 
 .team-acc__img {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: center / cover no-repeat; }
   @media screen and (max-width: 768px) {
@@ -871,6 +881,9 @@ button:focus {
   .menu .section__title {
     position: absolute;
     padding: 5.5625rem 5.9375rem; }
+    @media screen and (max-width: 768px) {
+      .menu .section__title {
+        padding: 5rem 0.5625rem; } }
     @media screen and (max-width: 375px) {
       .menu .section__title {
         padding: 5%; } }
@@ -1195,6 +1208,9 @@ button:focus {
 
 .footer__col {
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .footer__col {
+      width: 100%; } }
 
 @media screen and (max-width: 480px) {
   .footer__col--left {
@@ -1260,7 +1276,7 @@ button:focus {
 .nav {
   position: fixed;
   top: 5.625rem;
-  right: 2.375rem; }
+  right: 3.125rem; }
   @media screen and (max-width: 768px) {
     .nav {
       display: none; } }

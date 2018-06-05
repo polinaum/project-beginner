@@ -28,6 +28,10 @@
   .footer__col {
     width: 50%;
 
+    @include tablet {
+      width: 100%;
+    }
+
   }
 
   .footer__col--left {

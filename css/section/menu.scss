@@ -6,6 +6,10 @@
     position: absolute;
     padding: rem(89px) rem(95px);
 
+    @include tablet {
+      padding: rem(80px) rem(9px);  
+    }
+
     @include small-phone {
         padding: 5%;
     }
