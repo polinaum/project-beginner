@@ -325,5 +325,53 @@ function submitForm(e) {
       }
   });
 
+  //yandex map
+  ymaps.ready(init);
+
+  var placemarks = [
+      {
+        latitude: 59.89,
+        longitude: 30.42,
+        hintContent:'ул.Бабушкина, д.12/1,15',
+      }, 
+      {
+        latitude: 59.94533410, 
+        longitude: 30.38214794,
+        hintContent:'',
+      },
+      {
+        latitude: 59.97425702, 
+        longitude: 30.31005016,
+        hintContent:'',
+      },
+      {
+        latitude: 59.91480100,  
+        longitude: 30.49001045,
+        hintContent:'',
+      }
+  ]
+
+  function init(){
+      var map = new ymaps.Map('map', {
+          center: [59.93351451, 30.33126544],
+          zoom: 12,
+          controls: ['zoomControl'],
+          behaviors: ['drag'],
+      });
+
+      placemarks.forEach(obj => {
+        var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+            hintContent: obj.hintContent
+      },
+        {
+        iconLayout: 'default#image',
+        iconImageHref: '/icons/map-marker.svg',
+        iconImageSize: [46,57],
+        iconImageOffset: [-23,-57],
+        }); 
+        map.geoObjects.add(placemark);  
+      });
+  }
+
 
 
